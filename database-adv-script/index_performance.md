@@ -23,4 +23,16 @@ Improve the query performance by indexing frequently accessed columns involved i
 
 ### Example Query (Before Indexing)
 ```sql
+
+# Indexing for Query Optimization
+
+## Indexed Columns:
+- `User.email`: Frequently used for login and user lookup.
+- `Booking.user_id`: Used in JOINs and WHERE clauses to retrieve user bookings.
+- `Property.location`: Commonly filtered in search functionality.
+
+## Performance Measurement
+We used `EXPLAIN ANALYZE` to compare query execution before and after indexing.
+This helped us verify that the new indexes reduce query cost and improve performance on large datasets.
+
 EXPLAIN SELECT * FROM Booking WHERE user_id = '1234';
