@@ -32,3 +32,25 @@ This file includes both non-correlated and correlated SQL subqueries to extract 
 
 ## Usage
 Execute these queries on a MySQL database with `Property`, `Review`, `User`, and `Booking` tables preloaded.
+
+# Aggregations & Window Functions - Airbnb Clone
+
+This file contains SQL queries demonstrating the use of aggregate functions and window functions to analyze the Airbnb clone database.
+
+## Files Included
+- `aggregations_and_window_functions.sql`: Contains queries for:
+  - Counting total bookings per user
+  - Ranking properties by number of bookings
+
+## Queries Explained
+
+1. **Total Bookings Per User**
+   - Uses `COUNT` with `GROUP BY` to show how many bookings each user has made.
+
+2. **Ranking Properties**
+   - Uses `RANK()` window function to assign ranks to properties based on the number of bookings they have received.
+
+## Usage
+These queries can be executed on a MySQL/PostgreSQL database with the appropriate `User`, `Property`, and `Booking` tables.
+
+Ensure joins are correct and indexes exist on foreign keys for performance.
